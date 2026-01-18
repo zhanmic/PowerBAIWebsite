@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Documentation for BI Automation Interface configuration files, presets, and refresh workflows.">
+    <title>Documentation - BI Automation Interface</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">BI Automation Interface</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="getting-started.html">Getting Started</a></li>
+                <li><a href="docs.html">Documentation</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>Documentation</h1>
+            <p>Guidance on configuration files, presets, prefixes, and export settings.</p>
+        </div>
+    </section>
+
+    <section class="page-section">
+        <div class="container docs-layout">
+            <aside class="docs-sidebar">
+                <h3>Documentation</h3>
+                <ul class="docs-nav">
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#config-files">Config Files</a></li>
+                    <li><a href="#prefix-matching">Prefix Matching</a></li>
+                    <li><a href="#preset-selection">Preset Selection</a></li>
+                    <li><a href="#custom-prefixes">Custom Prefixes</a></li>
+                    <li><a href="#trigger-refresh">Trigger Refresh</a></li>
+                    <li><a href="#export-history">Export History</a></li>
+                    <li><a href="#cleanup">Cleanup Reports</a></li>
+                    <li><a href="#screenshots">Screenshots</a></li>
+                    <li><a href="#troubleshooting">Troubleshooting</a></li>
+                </ul>
+            </aside>
+
+            <div class="docs-content">
+                <section id="overview" class="docs-section">
+                    <h2>Overview</h2>
+                    <p>BI Automation Interface lets you refresh datasets in bulk and export refresh history across multiple workspaces. Everything is driven by simple JSON configuration files.</p>
+                    <div class="docs-callout">
+                        <strong>Tip:</strong> Use workspace name prefixes to select many workspaces at once.
+                    </div>
+                </section>
+
+                <section id="config-files" class="docs-section">
+                    <h2>Config Files</h2>
+                    <p>Each configuration file is a JSON object. Keys are preset names, and values are arrays of workspace prefixes.</p>
+                    <pre><code>{
+  "_instructions": "Remove instruction keys when creating your own config file.",
+  "All Prod": ["TeamName_Prod_"],
+  "All UAT": ["TeamName_UAT_"],
+  "All Dev": ["TeamName_Dev_"],
+  "Select All": ["TeamName_Prod_", "TeamName_UAT_", "TeamName_Dev_"]
+}</code></pre>
+                </section>
+
+                <section id="prefix-matching" class="docs-section">
+                    <h2>Prefix Matching</h2>
+                    <p>Prefixes match the beginning of workspace names. Matching is case-insensitive.</p>
+                    <div class="docs-callout">
+                        <strong>Example:</strong> Prefix <span class="inline-code">TeamName_Prod_</span> matches <span class="inline-code">TeamName_Prod_Apple</span> and <span class="inline-code">TeamName_Prod_BestBuy</span>.
+                    </div>
+                </section>
+
+                <section id="preset-selection" class="docs-section">
+                    <h2>Preset Selection</h2>
+                    <p>Choose a preset to quickly select a pre-defined set of workspace prefixes. You can also select all prefixes at once.</p>
+                </section>
+
+                <section id="custom-prefixes" class="docs-section">
+                    <h2>Custom Prefixes</h2>
+                    <p>Add custom prefixes in the text box. Use commas to separate multiple values.</p>
+                    <div class="docs-callout">
+                        <strong>Tip:</strong> Custom prefixes are combined with preset selections.
+                    </div>
+                </section>
+
+                <section id="trigger-refresh" class="docs-section">
+                    <h2>Trigger Refresh</h2>
+                    <p>Select a config file, choose a preset, and click <span class="inline-code">Trigger Refresh</span> to run refreshes in bulk.</p>
+                    <img src="images/screenshot-1.png" alt="Trigger Refresh page screenshot" />
+                </section>
+
+                <section id="export-history" class="docs-section">
+                    <h2>Export Refresh History</h2>
+                    <p>Use lookback days and top filters to control the output size. You can also provide a custom output path.</p>
+                    <img src="images/screenshot-2.png" alt="Export Refresh History page screenshot" />
+                </section>
+
+                <section id="cleanup" class="docs-section">
+                    <h2>Cleanup Reports</h2>
+                    <p>Cleanup removes user-created refresh report entries only. It does not delete anything from your workspaces or datasets.</p>
+                </section>
+
+                <section id="screenshots" class="docs-section">
+                    <h2>Screenshots</h2>
+                    <div class="screenshots-grid">
+                        <div class="screenshot-card">
+                            <img src="images/screenshot-3.png" alt="Manage Config Files page screenshot" />
+                            <p>Manage Config Files</p>
+                        </div>
+                        <div class="screenshot-card">
+                            <img src="images/screenshot-4.png" alt="Edit Template dialog screenshot" />
+                            <p>Edit Template</p>
+                        </div>
+                        <div class="screenshot-card">
+                            <img src="images/screenshot-5.png" alt="Configuration files help dialog screenshot" />
+                            <p>Config Help</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="troubleshooting" class="docs-section">
+                    <h2>Troubleshooting</h2>
+                    <p>Check the Activity Log for errors and warnings. If a config file is deleted, the app falls back to the template.</p>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 BI Automation Interface. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="docs.html">Documentation</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get started with BI Automation Interface: prerequisites, configuration files, and first refresh.">
+    <title>Getting Started - BI Automation Interface</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">BI Automation Interface</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="getting-started.html">Getting Started</a></li>
+                <li><a href="docs.html">Documentation</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>Getting Started</h1>
+            <p>Install prerequisites, configure prefixes, and run your first refresh.</p>
+        </div>
+    </section>
+
+    <section class="page-section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3>1. Install prerequisites</h3>
+                    <p>Ensure PowerShell 7 and the MicrosoftPowerBIMgmt module are available. Install .NET Desktop Runtime if prompted.</p>
+                </div>
+                <div class="content-card">
+                    <h3>2. Launch the app</h3>
+                    <p>Open BI Automation Interface and review the requirements dialog for setup guidance.</p>
+                </div>
+                <div class="content-card">
+                    <h3>3. Configure presets</h3>
+                    <p>Edit <span class="inline-code">Config_Template.json</span> to create your own workspace prefix presets.</p>
+                </div>
+                <div class="content-card">
+                    <h3>4. Trigger refresh</h3>
+                    <p>Select a configuration file, choose a preset, and click <span class="inline-code">Trigger Refresh</span>.</p>
+                </div>
+                <div class="content-card">
+                    <h3>5. Export history</h3>
+                    <p>Use <span class="inline-code">Export Refresh History</span> to generate CSV reports for auditing.</p>
+                </div>
+                <div class="content-card">
+                    <h3>6. Monitor logs</h3>
+                    <p>Review the Activity Log for status updates and troubleshooting details.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section">
+        <div class="container">
+            <h2 class="section-title">Config File Example</h2>
+            <div class="content-card">
+                <p>Workspace naming format: <span class="inline-code">TeamName_Environment_ClientName</span></p>
+                <pre><code>{
+  "All Prod": [
+    "TeamName_Prod_"
+  ],
+  "All UAT": [
+    "TeamName_UAT_"
+  ],
+  "All Dev": [
+    "TeamName_Dev_"
+  ],
+  "Select All": [
+    "TeamName_Prod_",
+    "TeamName_UAT_",
+    "TeamName_Dev_"
+  ]
+}</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section">
+        <div class="container">
+            <div class="content-card">
+                <h3>Need more detail?</h3>
+                <p>Check the documentation for prefix rules, presets, and troubleshooting steps.</p>
+                <a href="docs.html" class="btn btn-primary">View Documentation</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 BI Automation Interface. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="docs.html">Documentation</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

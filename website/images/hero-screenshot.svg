@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <rect width="1200" height="700" fill="#F5F5F5"/>
+  <rect x="40" y="40" width="1120" height="620" fill="#FFFFFF" stroke="#E1E1E1" stroke-width="2"/>
+  <text x="600" y="330" font-family="Segoe UI, Arial, sans-serif" font-size="28" fill="#605E5C" text-anchor="middle">
+    Add Hero Screenshot
+  </text>
+  <text x="600" y="370" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#9A9A9A" text-anchor="middle">
+    Replace this placeholder with an app screenshot
+  </text>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="600" viewBox="0 0 1000 600">
+  <rect width="1000" height="600" fill="#F5F5F5"/>
+  <rect x="30" y="30" width="940" height="540" fill="#FFFFFF" stroke="#E1E1E1" stroke-width="2"/>
+  <text x="500" y="290" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#605E5C" text-anchor="middle">
+    Add Requirements Screenshot
+  </text>
+  <text x="500" y="325" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#9A9A9A" text-anchor="middle">
+    Replace this placeholder with the dialog image
+  </text>
+</svg>
