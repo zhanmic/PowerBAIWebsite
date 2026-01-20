@@ -387,10 +387,61 @@ pre code {
     background-color: #FFFFFF;
 }
 
+.lightbox-image {
+    cursor: zoom-in;
+}
+
 .screenshot-card p {
     margin-top: 0.75rem;
     color: var(--text-light);
     font-weight: 600;
+}
+
+/* Lightbox */
+.lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    z-index: 1000;
+}
+
+.lightbox-overlay.open {
+    display: flex;
+}
+
+.lightbox-content {
+    max-width: 95vw;
+    max-height: 90vh;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background-color: #FFFFFF;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #1b1b1b;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.lightbox-close:hover {
+    background: #FFFFFF;
+}
+
+.lightbox-open {
+    overflow: hidden;
 }
 
 /* CTA Section */

@@ -40,7 +40,7 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="images/hero-screenshot.png" alt="BI Automation Interface Screenshot" />
+                <img class="lightbox-image" src="images/hero-screenshot.png" alt="BI Automation Interface Screenshot" />
             </div>
         </div>
     </section>
@@ -105,27 +105,27 @@
             <h2 class="section-title">Screenshots</h2>
             <div class="screenshots-grid">
                 <div class="screenshot-card">
-                    <img src="images/screenshot-1.png" alt="Trigger Refresh page screenshot" />
+                    <img class="lightbox-image" src="images/screenshot-1.png" alt="Trigger Refresh page screenshot" />
                     <p>Trigger Refresh</p>
                 </div>
                 <div class="screenshot-card">
-                    <img src="images/screenshot-2.png" alt="Export Refresh History page screenshot" />
+                    <img class="lightbox-image" src="images/screenshot-2.png" alt="Export Refresh History page screenshot" />
                     <p>Export Refresh History</p>
                 </div>
                 <div class="screenshot-card">
-                    <img src="images/screenshot-3.png" alt="Manage Config Files page screenshot" />
+                    <img class="lightbox-image" src="images/screenshot-3.png" alt="Manage Config Files page screenshot" />
                     <p>Manage Config Files</p>
                 </div>
                 <div class="screenshot-card">
-                    <img src="images/screenshot-4.png" alt="Edit Template dialog screenshot" />
+                    <img class="lightbox-image" src="images/screenshot-4.png" alt="Edit Template dialog screenshot" />
                     <p>Edit Template</p>
                 </div>
                 <div class="screenshot-card">
-                    <img src="images/screenshot-5.png" alt="Configuration files help dialog screenshot" />
+                    <img class="lightbox-image" src="images/screenshot-5.png" alt="Configuration files help dialog screenshot" />
                     <p>Config Help</p>
                 </div>
                 <div class="screenshot-card">
-                    <img src="images/screenshot-6.png" alt="Requirements dialog screenshot" />
+                    <img class="lightbox-image" src="images/screenshot-6.png" alt="Requirements dialog screenshot" />
                     <p>Requirements</p>
                 </div>
             </div>
@@ -154,5 +154,49 @@
             </ul>
         </div>
     </footer>
+    <div class="lightbox-overlay" id="lightbox" aria-hidden="true">
+        <button class="lightbox-close" type="button" aria-label="Close">×</button>
+        <img class="lightbox-content" id="lightbox-image" alt="" />
+    </div>
+    <script>
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImage = document.getElementById("lightbox-image");
+        const lightboxClose = lightbox.querySelector(".lightbox-close");
+
+        const openLightbox = (img) => {
+            lightboxImage.src = img.src;
+            lightboxImage.alt = img.alt || "";
+            lightbox.classList.add("open");
+            document.body.classList.add("lightbox-open");
+        };
+
+        const closeLightbox = () => {
+            lightbox.classList.remove("open");
+            document.body.classList.remove("lightbox-open");
+        };
+
+        document.querySelectorAll(".lightbox-image").forEach((img) => {
+            img.setAttribute("tabindex", "0");
+            img.addEventListener("click", () => openLightbox(img));
+            img.addEventListener("keydown", (event) => {
+                if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    openLightbox(img);
+                }
+            });
+        });
+
+        lightboxClose.addEventListener("click", closeLightbox);
+        lightbox.addEventListener("click", (event) => {
+            if (event.target === lightbox) {
+                closeLightbox();
+            }
+        });
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape" && lightbox.classList.contains("open")) {
+                closeLightbox();
+            }
+        });
+    </script>
 </body>
 </html>
