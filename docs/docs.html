@@ -42,7 +42,9 @@
                     <li><a href="#custom-prefixes">Custom Prefixes</a></li>
                     <li><a href="#trigger-refresh">Trigger Refresh</a></li>
                     <li><a href="#export-history">Export History</a></li>
+                    <li><a href="#manage-reports">Manage Refresh Reports</a></li>
                     <li><a href="#cleanup">Cleanup Reports</a></li>
+                    <li><a href="#help-tips">In-app Help</a></li>
                     <li><a href="#screenshots">Screenshots</a></li>
                     <li><a href="#troubleshooting">Troubleshooting</a></li>
                 </ul>
@@ -51,7 +53,8 @@
             <div class="docs-content">
                 <section id="overview" class="docs-section">
                     <h2>Overview</h2>
-                    <p>BI Automation Interface lets you refresh datasets in bulk and export refresh history across multiple workspaces. Everything is driven by simple JSON configuration files.</p>
+                    <p>BI Automation Interface lets you refresh datasets in bulk and export refresh history across multiple workspaces. It helps you spot refresh failures quickly across many workspaces and reports. Everything is driven by simple JSON configuration files.</p>
+                    <p>You do not need Power BI admin rights. If you can access a workspace dataset and view refresh history in the cloud, you can use the tool.</p>
                     <div class="docs-callout">
                         <strong>Tip:</strong> Use workspace name prefixes to select many workspaces at once.
                     </div>
@@ -93,13 +96,21 @@
                 <section id="trigger-refresh" class="docs-section">
                     <h2>Trigger Refresh</h2>
                     <p>Select a config file, choose a preset, and click <span class="inline-code">Trigger Refresh</span> to run refreshes in bulk.</p>
-                    <img class="lightbox-image" src="images/screenshot-1.png" alt="Trigger Refresh page screenshot" />
+                    <img class="lightbox-image" src="images/Trigger refesh tab help.png" alt="Trigger Refresh help dialog screenshot" />
                 </section>
 
                 <section id="export-history" class="docs-section">
                     <h2>Export Refresh History</h2>
                     <p>Use lookback days and top filters to control the output size. You can also provide a custom output path.</p>
-                    <img class="lightbox-image" src="images/screenshot-2.png" alt="Export Refresh History page screenshot" />
+                    <p>Reports include an HTML summary plus CSV outputs for analysis.</p>
+                    <img class="lightbox-image" src="images/Export refresh history tab help.png" alt="Export Refresh History help dialog screenshot" />
+                </section>
+
+                <section id="manage-reports" class="docs-section">
+                    <h2>Manage Refresh Reports</h2>
+                    <p>Preview HTML reports, open the summary CSV, and open the details CSV or Excel output when available.</p>
+                    <p>Sample report files are provided for first-time use, so the page is never empty.</p>
+                    <img class="lightbox-image" src="images/Manage Report tab.png" alt="Manage Refresh Reports page screenshot" />
                 </section>
 
                 <section id="cleanup" class="docs-section">
@@ -107,20 +118,26 @@
                     <p>Cleanup removes user-created refresh report entries only. It does not delete anything from your workspaces or datasets.</p>
                 </section>
 
+                <section id="help-tips" class="docs-section">
+                    <h2>In-app Help</h2>
+                    <p>Each tab has a help button with short explanations of inputs, outputs, and file naming.</p>
+                    <p>Use the help popups whenever you need a quick reminder while working.</p>
+                </section>
+
                 <section id="screenshots" class="docs-section">
                     <h2>Screenshots</h2>
                     <div class="screenshots-grid">
                         <div class="screenshot-card">
+                            <img class="lightbox-image" src="images/Refresh Report tab help.png" alt="Refresh Report help dialog screenshot" />
+                            <p>Refresh Report Help</p>
+                        </div>
+                        <div class="screenshot-card">
+                            <img class="lightbox-image" src="images/report in browser.png" alt="Refresh report preview in browser screenshot" />
+                            <p>Report Preview (Browser)</p>
+                        </div>
+                        <div class="screenshot-card">
                             <img class="lightbox-image" src="images/screenshot-3.png" alt="Manage Config Files page screenshot" />
                             <p>Manage Config Files</p>
-                        </div>
-                        <div class="screenshot-card">
-                            <img class="lightbox-image" src="images/screenshot-4.png" alt="Edit Template dialog screenshot" />
-                            <p>Edit Template</p>
-                        </div>
-                        <div class="screenshot-card">
-                            <img class="lightbox-image" src="images/screenshot-5.png" alt="Configuration files help dialog screenshot" />
-                            <p>Config Help</p>
                         </div>
                     </div>
                 </section>
