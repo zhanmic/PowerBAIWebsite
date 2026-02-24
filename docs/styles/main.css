@@ -323,6 +323,84 @@ pre code {
     color: var(--text-dark);
 }
 
+/* Video section (YouTube embed) */
+.video-section .section-title {
+    margin-bottom: 0.5rem;
+}
+
+.video-intro {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto 1rem;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 8px;
+}
+
+.video-link {
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+.video-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.video-link a:hover {
+    text-decoration: underline;
+}
+
+.video-fallback {
+    max-width: 720px;
+    margin: 0 auto 1rem;
+}
+
+.video-thumb-link {
+    display: block;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+}
+
+.video-thumb-link img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.video-play-label {
+    display: block;
+    text-align: center;
+    padding: 0.75rem;
+    background: var(--bg-light);
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.video-thumb-link:hover .video-play-label {
+    text-decoration: underline;
+}
+
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));

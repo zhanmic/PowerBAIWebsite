@@ -30,6 +30,31 @@
         </div>
     </section>
 
+    <section class="page-section video-section">
+        <div class="container">
+            <h2 class="section-title">Watch the Walkthrough</h2>
+            <div class="video-wrapper" id="video-embed">
+                <iframe src="https://www.youtube.com/embed/AhUvkJkmsHg" title="BI Automation Interface - YouTube" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="video-fallback" id="video-fallback" style="display: none;">
+                <a href="https://youtu.be/AhUvkJkmsHg" target="_blank" rel="noopener noreferrer" class="video-thumb-link">
+                    <img src="https://img.youtube.com/vi/AhUvkJkmsHg/hqdefault.jpg" alt="Play: BI Automation Interface" width="640" height="360" />
+                    <span class="video-play-label">▶ Watch on YouTube</span>
+                </a>
+            </div>
+            <p class="video-link"><a href="https://youtu.be/AhUvkJkmsHg" target="_blank" rel="noopener noreferrer">Open on YouTube</a></p>
+        </div>
+    </section>
+    <script>
+        (function () {
+            if (window.location.protocol === "file:") {
+                var embed = document.getElementById("video-embed");
+                var fallback = document.getElementById("video-fallback");
+                if (embed && fallback) { embed.style.display = "none"; fallback.style.display = "block"; }
+            }
+        })();
+    </script>
+
     <section class="page-section">
         <div class="container">
             <div class="content-grid">
