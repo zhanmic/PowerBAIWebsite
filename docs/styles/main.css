@@ -28,6 +28,97 @@ body {
     padding: 0 20px;
 }
 
+/* Promotional Banner */
+.promo-banner {
+    background: linear-gradient(135deg, #B22234 0%, #3C3B6E 50%, #B22234 100%);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 101;
+}
+
+.promo-banner::before {
+    content: "🇺🇸";
+    position: absolute;
+    left: 2rem;
+    font-size: 2rem;
+    animation: pulse 2s infinite;
+}
+
+.promo-banner::after {
+    content: "🇺🇸";
+    position: absolute;
+    right: 2rem;
+    font-size: 2rem;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.promo-banner .container {
+    position: relative;
+    z-index: 1;
+}
+
+.promo-banner-content {
+    font-weight: 600;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+.promo-banner-highlight {
+    display: inline-block;
+    background-color: #FFD700;
+    color: #3C3B6E;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin: 0 0.5rem;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    }
+    to {
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.9);
+    }
+}
+
+.promo-banner-subtext {
+    font-size: 0.9rem;
+    opacity: 0.95;
+    margin-top: 0.25rem;
+}
+
+@media (max-width: 768px) {
+    .promo-banner::before,
+    .promo-banner::after {
+        display: none;
+    }
+    
+    .promo-banner-content {
+        font-size: 1rem;
+    }
+    
+    .promo-banner-highlight {
+        font-size: 1.1rem;
+        display: block;
+        margin: 0.25rem 0;
+    }
+}
+
 /* Navigation */
 .navbar {
     background-color: var(--bg-white);
